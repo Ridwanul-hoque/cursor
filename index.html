@@ -33,10 +33,13 @@
         width: 952px;
         height: 666px;
         background: var(--pink);
+        display: grid;
+        grid-template-columns: repeat(952, 1px);
+        grid-template-rows: repeat(666, 1px);
       }
 
       .box {
-        position: absolute;
+        position: relative;
         overflow: hidden;
       }
 
@@ -86,7 +89,8 @@
   <body class="min-h-screen flex items-center justify-center bg-black p-6">
     <main class="canvas relative shadow-2xl">
       <section
-        class="box left-[10px] top-[10px] w-[170px] h-[322px] bg-black"
+        class="box bg-black"
+        style="grid-column: 11 / span 170; grid-row: 11 / span 322"
         aria-label="Top left portrait"
       >
         <img
@@ -96,7 +100,7 @@
         />
       </section>
 
-      <section class="box left-[182px] top-[10px] w-[325px] h-[126px] bg-[#c10086]">
+      <section class="box bg-[#c10086]" style="grid-column: 183 / span 325; grid-row: 11 / span 126">
         <div class="w-full h-full border border-black/35 flex items-center px-9">
           <p class="sig text-white text-[74px] leading-none mr-4">CH</p>
           <p class="text-white text-[39px] leading-none tracking-wide">caite hevner design</p>
@@ -104,7 +108,8 @@
       </section>
 
       <section
-        class="box left-[509px] top-[10px] w-[288px] h-[312px] bg-black border-[2px] border-[#1ec8b5]"
+        class="box bg-black border-[2px] border-[#1ec8b5]"
+        style="grid-column: 510 / span 288; grid-row: 11 / span 312"
         aria-label="Reel"
       >
         <img
@@ -116,11 +121,17 @@
         <h2 class="title absolute right-[66px] top-[126px] text-white text-[52px] font-semibold">REEL</h2>
       </section>
 
-      <section class="box left-[799px] top-[10px] w-[143px] h-[126px] bg-black flex items-center justify-center">
+      <section
+        class="box bg-black flex items-center justify-center"
+        style="grid-column: 800 / span 143; grid-row: 11 / span 126"
+      >
         <h2 class="title text-[44px] text-[#ff2fbf] font-semibold">INSTA</h2>
       </section>
 
-      <section class="box left-[182px] top-[147px] w-[154px] h-[176px] bg-black flex flex-col items-center">
+      <section
+        class="box bg-black flex flex-col items-center"
+        style="grid-column: 183 / span 154; grid-row: 148 / span 176"
+      >
         <h2 class="title text-white text-[58px] leading-[0.9] font-semibold text-center mt-7">WHAT'S<br />NEW?</h2>
         <div class="mt-8 space-y-1">
           <div class="chev"></div>
@@ -129,7 +140,7 @@
         </div>
       </section>
 
-      <section class="box left-[346px] top-[147px] w-[161px] h-[176px] bg-black">
+      <section class="box bg-black" style="grid-column: 347 / span 161; grid-row: 148 / span 176">
         <img
           class="img-cover opacity-80"
           src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80"
@@ -138,16 +149,22 @@
         <div class="absolute inset-0 bg-red-800/35"></div>
       </section>
 
-      <section class="box left-[799px] top-[147px] w-[143px] h-[176px] bg-[#c50087] flex flex-col items-center justify-center gap-4">
+      <section
+        class="box bg-[#c50087] flex flex-col items-center justify-center gap-4"
+        style="grid-column: 800 / span 143; grid-row: 148 / span 176"
+      >
         <h2 class="title text-white text-[50px] leading-none font-semibold text-center">Contact</h2>
         <div class="mini-oval"></div>
       </section>
 
-      <section class="box left-[799px] top-[333px] w-[143px] h-[130px] bg-black flex items-center justify-center">
+      <section
+        class="box bg-black flex items-center justify-center"
+        style="grid-column: 800 / span 143; grid-row: 334 / span 130"
+      >
         <h2 class="title text-[#ff2fbf] text-[52px] leading-none font-semibold">CV</h2>
       </section>
 
-      <section class="box left-[10px] top-[334px] w-[326px] h-[322px] bg-black p-4">
+      <section class="box bg-black p-4" style="grid-column: 11 / span 326; grid-row: 335 / span 322">
         <span class="inline-block rounded bg-[#1f88e9] text-white text-[22px] px-2 py-[2px] font-semibold leading-none ml-10">
           277 x 509
         </span>
@@ -161,7 +178,10 @@
         </ul>
       </section>
 
-      <section class="box left-[299px] top-[277px] w-[500px] h-[191px] bg-black border-[3px] border-[#1ec8b5] p-5">
+      <section
+        class="box bg-black border-[3px] border-[#1ec8b5] p-5 z-20"
+        style="grid-column: 300 / span 500; grid-row: 278 / span 191"
+      >
         <div class="flex h-full">
           <h2 class="title text-[#ff10b4] text-[59px] leading-[0.9] font-semibold mr-9 mt-1">WHO<br />WE<br />ARE?</h2>
           <p class="text-white text-[20px] leading-[1.45] font-medium mt-3 max-w-[334px]">
@@ -173,7 +193,7 @@
         </span>
       </section>
 
-      <section class="box left-[345px] top-[473px] w-[286px] h-[183px] bg-black">
+      <section class="box bg-black" style="grid-column: 346 / span 286; grid-row: 474 / span 183">
         <img
           class="img-cover opacity-80"
           src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=1200&q=80"
@@ -183,7 +203,7 @@
         <h2 class="title absolute left-[49px] bottom-[21px] text-white text-[52px] font-semibold">DESIGN STUDIO</h2>
       </section>
 
-      <section class="box left-[641px] top-[473px] w-[301px] h-[183px] bg-black">
+      <section class="box bg-black" style="grid-column: 642 / span 301; grid-row: 474 / span 183">
         <img
           class="img-cover opacity-80"
           src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=1200&q=80"
