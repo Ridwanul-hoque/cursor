@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caite Hevner Design - Grid Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600;700;800&family=Oswald:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pink: #d7008f;
+        --cyan: #1ec8b5;
+      }
+
+      body {
+        font-family: Inter, sans-serif;
+        background: #0a0011;
+      }
+
+      .img-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .title {
+        font-family: Oswald, sans-serif;
+        letter-spacing: 0.02em;
+      }
+
+      .sig {
+        font-family: "Great Vibes", cursive;
+      }
+
+      .chev {
+        width: 24px;
+        height: 24px;
+        border-left: 4px solid var(--pink);
+        border-bottom: 4px solid var(--pink);
+        transform: rotate(-45deg);
+      }
+
+      .mini-oval {
+        width: 54px;
+        height: 30px;
+        border-radius: 999px;
+        background: #ececec;
+        position: relative;
+      }
+
+      .mini-oval::after {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 12px;
+        border: 2px solid #c8c8c8;
+        border-radius: 999px;
+        inset: 8px 0 0 16px;
+        transform: rotate(-8deg);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center bg-black p-6">
+    <main
+      class="relative grid w-[952px] h-[666px] bg-[var(--pink)] shadow-2xl gap-0 grid-cols-[repeat(952,1px)] grid-rows-[repeat(666,1px)]"
+    >
+      <section
+        class="relative overflow-hidden bg-black col-start-[11] col-span-[170] row-start-[11] row-span-[322]"
+        aria-label="Top left portrait"
+      >
+        <img
+          class="img-cover opacity-90"
+          src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=80"
+          alt="Performer on stage"
+        />
+      </section>
+
+      <section class="relative overflow-hidden bg-[#c10086] col-start-[183] col-span-[325] row-start-[11] row-span-[126]">
+        <div class="w-full h-full border border-black/35 flex items-center px-9">
+          <p class="sig text-white text-[74px] leading-none mr-4">CH</p>
+          <p class="text-white text-[39px] leading-none tracking-wide">caite hevner design</p>
+        </div>
+      </section>
+
+      <section
+        class="relative overflow-hidden bg-black border-[2px] border-[#1ec8b5] col-start-[510] col-span-[288] row-start-[11] row-span-[312]"
+        aria-label="Reel"
+      >
+        <img
+          class="img-cover opacity-85"
+          src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80"
+          alt="Night house scene"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
+        <h2 class="title absolute right-[66px] top-[126px] text-white text-[52px] font-semibold">REEL</h2>
+      </section>
+
+      <section
+        class="relative overflow-hidden bg-black flex items-center justify-center col-start-[800] col-span-[143] row-start-[11] row-span-[126]"
+      >
+        <h2 class="title text-[44px] text-[#ff2fbf] font-semibold">INSTA</h2>
+      </section>
+
+      <section
+        class="relative overflow-hidden bg-black flex flex-col items-center col-start-[183] col-span-[154] row-start-[148] row-span-[176]"
+      >
+        <h2 class="title text-white text-[58px] leading-[0.9] font-semibold text-center mt-7">WHAT'S<br />NEW?</h2>
+        <div class="mt-8 space-y-1">
+          <div class="chev"></div>
+          <div class="chev"></div>
+          <div class="chev"></div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden bg-black col-start-[347] col-span-[161] row-start-[148] row-span-[176]">
+        <img
+          class="img-cover opacity-80"
+          src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80"
+          alt="Red stage lights"
+        />
+        <div class="absolute inset-0 bg-red-800/35"></div>
+      </section>
+
+      <section
+        class="relative overflow-hidden bg-[#c50087] flex flex-col items-center justify-center gap-4 col-start-[800] col-span-[143] row-start-[148] row-span-[176]"
+      >
+        <h2 class="title text-white text-[50px] leading-none font-semibold text-center">Contact</h2>
+        <div class="mini-oval"></div>
+      </section>
+
+      <section
+        class="relative overflow-hidden bg-black flex items-center justify-center col-start-[800] col-span-[143] row-start-[334] row-span-[130]"
+      >
+        <h2 class="title text-[#ff2fbf] text-[52px] leading-none font-semibold">CV</h2>
+      </section>
+
+      <section class="relative overflow-hidden bg-black p-4 col-start-[11] col-span-[326] row-start-[335] row-span-[322]">
+        <span class="inline-block rounded bg-[#1f88e9] text-white text-[22px] px-2 py-[2px] font-semibold leading-none ml-10">
+          277 x 509
+        </span>
+        <ul class="text-white text-[31px] leading-[1.24] mt-7 list-disc pl-8">
+          <li>Romy &amp; Michele: The Musical &mdash; New York Premiere at Stage 42</li>
+          <li>Dylan Mulvaney's Least Problematic Woman in the World - premiered at the Lucille Lortel Theatre</li>
+          <li>Trisha Paytas' Big Broadway Dream &mdash; Broadway production design debut, all proceeds benefitting the Entertainment Community Fund</li>
+          <li>Rolling Thunder &mdash; U.S. premiered at New World Stages</li>
+          <li>Broadway Bares 33 &mdash; record-breaking $2,447,967 raised for Broadway Cares / Equity Fights AIDS</li>
+          <li>Upcoming: Elephant Shoes at Two River Theater (May 2026)</li>
+        </ul>
+      </section>
+
+      <section
+        class="relative overflow-hidden bg-black border-[3px] border-[#1ec8b5] p-5 z-20 col-start-[300] col-span-[500] row-start-[278] row-span-[191]"
+      >
+        <div class="flex h-full">
+          <h2 class="title text-[#ff10b4] text-[59px] leading-[0.9] font-semibold mr-9 mt-1">WHO<br />WE<br />ARE?</h2>
+          <p class="text-white text-[20px] leading-[1.45] font-medium mt-3 max-w-[334px]">
+            We create bold, imaginative designs that bring stories to life - from Broadway productions to immersive installations, concerts, and events across the globe.
+          </p>
+        </div>
+        <span class="absolute left-[221px] bottom-[35px] bg-[#1ec8b5] text-white text-[22px] leading-none px-2 py-1">
+          Sojib Das
+        </span>
+      </section>
+
+      <section class="relative overflow-hidden bg-black col-start-[346] col-span-[286] row-start-[474] row-span-[183]">
+        <img
+          class="img-cover opacity-80"
+          src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=1200&q=80"
+          alt="Concert stage"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <h2 class="title absolute left-[49px] bottom-[21px] text-white text-[52px] font-semibold">DESIGN STUDIO</h2>
+      </section>
+
+      <section class="relative overflow-hidden bg-black col-start-[642] col-span-[301] row-start-[474] row-span-[183]">
+        <img
+          class="img-cover opacity-80"
+          src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=1200&q=80"
+          alt="Theatrical portrait"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <h2 class="title absolute left-[32px] bottom-[21px] text-white text-[52px] font-semibold">THEATRICAL DESIGN</h2>
+      </section>
+    </main>
+  </body>
+</html>
